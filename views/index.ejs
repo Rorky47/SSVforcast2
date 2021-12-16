@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+      <img class="banner floatLeft" alt="SideBannerIMG">
+      <img class="logo floatRight" alt="SMLLogo">
+      <h1 class="logoHeader">Snow</h1>
+      <h1 class="logoHeader">Forecast</h1>
+      <h1 class="logoHeader" id="day"></h1>
+    </header>
+    <div class="center">
+      <div class="textForecast"><h1 class="forecastHeader">Sunshine Village Weather (Next 3 days)</h1><%=forecastThree%></div>
+      <div class="textForecast"><h1 class="forecastHeader">Sunshine Village Weather (Days 4 - 6)</h1><%=forecastFour%></div>
+    </div>
+  </body>
+</html>
+<script>
+  const day = document.getElementById('day');
+
+  function getDate() {
+
+    let today = new Date(),
+      dd = String(today.getDate()).padStart(2, '0'),
+      mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+
+    day.innerHTML = `${dd}<span>/</span>${mm}`;
+
+    setTimeout(getDate, 60000)
+  }
+
+  getDate();
+</script>

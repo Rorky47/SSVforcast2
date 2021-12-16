@@ -1,0 +1,45 @@
+.banner {
+    width: 226px;
+    height: 418px;
+    content: url(/images/SSVheaderIMG.png);
+}
+.logo {
+    width: 250px;
+    height: 150px;
+    content: url(/images/SMLLogo.png);
+}
+
+.logoHeader {
+    padding-bottom: 50px;
+    font-weight: normal;
+    font-family: Rockwell;
+    font-size: 30px;
+    vertical-align: middle;
+    text-align: center; 
+    color: #0070C0;
+    margin: 10px;
+
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.floatLeft { float: left; }
+
+.floatRight { float: right; }
+
+.textForecast{
+    width:400px;
+    display: inline-block;
+    font-weight: normal;
+    font-family: Lato;
+    font-size: 15px;
+    border: 10px;
+}
+.forecastHeader{
+    font-weight: normal;
+    font-family: Lato;
+    font-size: 20px;
+}
